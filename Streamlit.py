@@ -7,6 +7,7 @@ import tensorflow as tf
 import streamlit as st
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
+from tensorflow.keras.applications.xception import preprocess_input
 from PIL import Image
 import numpy as np
 
@@ -79,9 +80,9 @@ if uploaded_file is not None:
                      'Starfish',
                      'Turtle_Tortoise',
                      'Whale']  # Replace with your actual class names
-    label, confidence = predict_image(image)
-    st.write(f"Prediction: {class_names[label]}")
-    st.write(f"Confidence: {confidence:.2f}")
+    max_result = predict_image(image)
+    st.write(f"Prediction: {max_result}")
+   
 
 
 # In[ ]:
