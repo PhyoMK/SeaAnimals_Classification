@@ -2,8 +2,8 @@
 # coding: utf-8
 
 # In[8]:
-
-import tensorflow
+ 
+import tensorflow as tf
 import streamlit as st
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
